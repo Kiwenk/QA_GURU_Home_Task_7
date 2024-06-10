@@ -1,2 +1,2 @@
 # Example_QA_guru_test
-test
+Добрый день. Это проект. Он пустой
