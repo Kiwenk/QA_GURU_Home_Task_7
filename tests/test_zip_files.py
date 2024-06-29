@@ -15,7 +15,7 @@ def test_check_pdf_file():
             assert num_pages == 484, "Количество страниц не сходится"
             assert text == 'pytest Documentation\n''Release 0.1\n''holger krekel, trainer and consultant, https://merlinux.eu/\n''Jun 04, 2024'
 
-def test_check_pdf_file_xlsx():
+def test_check_xlsx_file():
     with zipfile.ZipFile(ZIP_DIR, 'r') as zip_file:
         with zip_file.open("test_file_xlsx.xlsx") as xlsx_file:
             workbook = load_workbook(filename=xlsx_file)
@@ -24,7 +24,7 @@ def test_check_pdf_file_xlsx():
 
             assert workbook_value == 'OU001'
 
-def test_check_pdf_file_csv():
+def test_check_csv_file():
     with zipfile.ZipFile(ZIP_DIR, 'r') as zip_file:
         with zip_file.open("test_file_csv.csv") as csv_file:
             content = csv_file.read().decode('utf-8-sig')
